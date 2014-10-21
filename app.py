@@ -1,4 +1,5 @@
 #!/usr/bin/python
+from __future__ import print_function
 import sys
 
 # Implementation of FizzBuzz v0.00
@@ -11,6 +12,8 @@ import sys
 # Version 2: if number is prime, print "<number> is a prime" instead
 #            Take one argument,  and count up to it
 
+# TODO: Test with python3
+
 class FizzBuzz():
     def __init__(self):
         pass
@@ -18,7 +21,7 @@ class FizzBuzz():
     # Run from 1 to "end". Maybe. Test fails for some reason
     def run(self, end, out=sys.stdout):
         for i in range(1, end):
-            print >> out, self.calc(i)
+            print(self.calc(i), file=out)
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
