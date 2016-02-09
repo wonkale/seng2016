@@ -22,9 +22,10 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-	#Version 1
-		
-		if (i%3 and i%5 ==0):
+	#Version 1&&2
+        
+
+		if (i%3 ==0 and i%5 ==0):
                     viesti = "FizzBuzz"
                 elif (i%3 == 0):
                     viesti = "Fizz"
@@ -32,10 +33,18 @@ class FizzBuzz():
                     viesti = "Buzz"
 		else: 
                     viesti = i
-		
+                n = 2
+                prime = True
+		for n in range(2, i):
+                    if (i % n) == 0:
+                        prime = False
+                if (prime == True and i != 1):
+                        viesti = "%d is a prime" % i
 		
 		return viesti
 	#version 2
+	
+		
 		
 
     
