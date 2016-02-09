@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import sys
-# Ollakko vaiko eikö olla helppoa!
+# Ollakko vaiko eiko olla helppoa!
 # Implementation of FizzBuzz v0.00
 
 # Version 1: if number is divisible by 3, print Fizz
@@ -22,8 +22,27 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-        return i
+	#Version 1
+		
+		if (i%3 and i%5 ==0):
+                    viesti = "FizzBuzz"
+                elif (i%3 == 0):
+                    viesti = "Fizz"
+		elif (i%5 == 0):
+                    viesti = "Buzz"
+		else: 
+                    viesti = i
+		
+		
+		return viesti
+	#version 2
+		
+
+    
+   
+
 
 if __name__ == "__main__":
     app = FizzBuzz()
     app.run(100)
+	
